@@ -43,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String user_name = user_edit_text.getText().toString();
             String user_pass = pass_edit_text.getText().toString();
 
-            if (user_name == " " && user_pass == " "){
+            if (user_name.equals("") && user_pass.equals("")){
                 Toast.makeText(MainActivity.this,"Details need to fillUp",Toast.LENGTH_SHORT).show();
             }else {
                 SharedPreferences sharedPreferences = getSharedPreferences("userDetails",MODE_PRIVATE);
